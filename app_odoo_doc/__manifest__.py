@@ -38,7 +38,7 @@
 ##############################################################################
 
 {
-    'name': "odoo User Doc,Developer Doc Anywhere.My document. odoo用户手册，开发手册大全",
+    'name': "odoo User Doc,Developer Doc,Help on topic. odoo应用内用户手册/开发手册大全",
     'version': '16.23.08.28',
     'author': 'odooai.cn',
     'category': 'Base',
