@@ -15,4 +15,8 @@ class ResConfigSettings(models.TransientModel):
 
     def action_set_app_doc_root_to_my(self):
         base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
-        self.app_doc_root_url = base_url
+        self.env['ir.config_parameter'].sudo().set_param('app_doc_root_url', base_url)
+
+    def action_set_app_doc_root_to_odooai(self):
+        base_url = 'https://www.odooai.cn'
+        self.env['ir.config_parameter'].sudo().set_param('app_doc_root_url', base_url)

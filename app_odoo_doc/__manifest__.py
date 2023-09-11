@@ -38,8 +38,8 @@
 ##############################################################################
 
 {
-    'name': "odoo User Doc,Developer Doc,Help on topic. odoo应用内用户手册/开发手册大全",
-    'version': '16.23.08.28',
+    'name': "odoo User Doc,Developer Doc Anywhere.My document. odoo用户手册，开发手册大全",
+    'version': '16.23.09.11',
     'author': 'odooai.cn',
     'category': 'Base',
     'website': 'https://www.odooai.cn',
@@ -80,7 +80,9 @@
         # 'security/*.xml',
         # 'security/ir.model.access.csv',
         'data/ir_module_module_data.xml',
+        'data/ir_config_parameter_data.xml',
         'views/ir_module_module_views.xml',
+        'views/res_config_settings_views.xml',
         # 'views/webclient_templates.xml',
         # 'report/.xml',
     ],
