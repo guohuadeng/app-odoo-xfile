@@ -32,21 +32,20 @@ class DocumentationController(http.Controller):
                 return request.redirect(base_url_doc, 303)
         #     todo: 当前直接303转资源
         return request.redirect('/app_odoo_doc/static%s' % base_url_doc, 303)
-        
-
-    @http.route('/app/get_url_qrcode', type='http', auth="public")
-    def get_url_qrcode(self, url, **kw):
-        qr = qrcode.QRCode(version=1,
-                           error_correction=qrcode.constants.ERROR_CORRECT_L,
-                           box_size=10,
-                           border=1)
-        qr.add_data(url)
-        qr.make(fit=True)
-
-        image = qr.make_image(fill_color="black", back_color="white")
-        # 将图片数据转换为 base64 编码
-        buffered = io.BytesIO()
-        image.save(buffered, format="PNG")
-        image_data = base64.b64encode(buffered.getvalue()).decode()
-
-        return image_data
+    
+    # @http.route('/app/get_url_qrcode', type='http', auth="public")
+    # def get_url_qrcode(self, url, **kw):
+    #     qr = qrcode.QRCode(version=1,
+    #                        error_correction=qrcode.constants.ERROR_CORRECT_L,
+    #                        box_size=10,
+    #                        border=1)
+    #     qr.add_data(url)
+    #     qr.make(fit=True)
+    #
+    #     image = qr.make_image(fill_color="black", back_color="white")
+    #     # 将图片数据转换为 base64 编码
+    #     buffered = io.BytesIO()
+    #     image.save(buffered, format="PNG")
+    #     image_data = base64.b64encode(buffered.getvalue()).decode()
+    #
+    #     return image_data

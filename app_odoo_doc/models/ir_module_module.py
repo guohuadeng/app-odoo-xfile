@@ -18,16 +18,17 @@ class IrModule(models.Model):
         # base_url = request.env['ir.config_parameter'].sudo().get_param('web.base.url')
         self.ensure_one()
         url = self.base_url_doc
-        # app_doc_root_url = self.env['ir.config_parameter'].sudo().get_param('app_doc_root_url')
-        # if url and app_doc_root_url and not url.startswith(('//', 'http://', 'https://')):
-        #     url = '%s/%s' % (app_doc_root_url, url[1:] if url[0] == '/' else url)
+        app_doc_root_url = self.env['ir.config_parameter'].sudo().get_param('app_doc_root_url')
+        if url and app_doc_root_url and not url.startswith(('//', 'http://', 'https://')):
+            url = '%s/%s' % (app_doc_root_url, url[1:] if url[0] == '/' else url)
         if not url:
-            return self.action_error_notify()
-        else:
-            # 处理语言
-            lang = self.env.user.lang or get_lang(self.env).code
-            if lang != 'en_US' and url.find('lang') == -1:
-                url = url.replace(odoo.release.serie, '%s/%s' % (odoo.release.serie, lang))
+            url = 'https://www.odooai.cn/documentation/%s' % odoo.release.serie
+            # return self.action_error_notify()
+        # 处理语言
+        lang = self.env.user.lang or get_lang(self.env).code
+        if lang != 'en_US' and url.find('lang') == -1:
+            url = url.replace(odoo.release.serie, '%s/%s' % (odoo.release.serie, lang))
+            
         return {
             'type': 'ir.actions.act_url',
             'url': url,
