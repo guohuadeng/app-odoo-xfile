@@ -54,8 +54,8 @@
         'app_odoo_customize',
     ],
     'summary': '''
-    odoo User Documentation and odoo Developer documentation of odoo.
-    1 Click to access help of current topic. Add odoo doc local. Documentation with your company name and logo.
+    odoo Help document local. odoo User Documentation and odoo Developer documentation of odoo.
+    1 Click to access help of current topic. Add odoo doc local.
     Mrp doc, Sale doc, purchase doc, stock doc, account doc all in one.
     ''',
     'description': '''    
