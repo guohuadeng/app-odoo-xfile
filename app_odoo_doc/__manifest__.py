@@ -39,7 +39,7 @@
 
 {
     'name': "odoo User Doc,Developer Doc Anywhere.My document. odoo用户手册，开发手册大全",
-    'version': '16.23.09.11',
+    'version': '16.24.02.27',
     'author': 'odooai.cn',
     'category': 'Base',
     'website': 'https://www.odooai.cn',
@@ -54,8 +54,8 @@
         'app_odoo_customize',
     ],
     'summary': '''
-    odoo Help document local. odoo User Documentation and odoo Developer documentation of odoo.
-    1 Click to access help of current topic. Add odoo doc local.
+    odoo User Documentation and odoo Developer documentation of odoo.
+    1 Click to access help of current topic. Add odoo doc local. Documentation with your company name and logo.
     Mrp doc, Sale doc, purchase doc, stock doc, account doc all in one.
     ''',
     'description': '''    
